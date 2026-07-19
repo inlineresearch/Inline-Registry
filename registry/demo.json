@@ -1,11 +1,14 @@
 {
   "id": "demo",
   "name": "Inline Demo Extension",
-  "description": "A reference extension: two sub-extensions, custom nodes, and a model requirement.",
+  "description": "A reference extension: two modules, custom nodes, and a model requirement.",
   "repo": "https://github.com/inline-studio/inline-extension-demo",
   "homepage": "https://github.com/inline-studio/inline-extension-demo",
   "author": "Inline Studio",
-  "tags": ["reference", "image"],
+  "tags": [
+    "reference",
+    "image"
+  ],
   "latest": "v1.0.0",
   "versions": [
     {

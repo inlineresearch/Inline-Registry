@@ -2,9 +2,9 @@
   "id": "demo",
   "name": "Inline Demo Extension",
   "description": "A reference extension: a runnable generate node plus three image nodes.",
-  "repo": "https://github.com/inlineresearch/Inline-Extension-Reference",
-  "homepage": "https://github.com/inlineresearch/Inline-Extension-Reference",
-  "author": "Inline Research",
+  "repo": "https://github.com/inlineresearch/Inline-Studio-Extension-Guide",
+  "homepage": "https://github.com/inlineresearch/Inline-Studio-Extension-Guide",
+  "author": "Inline Studio",
   "tags": [
     "reference",
     "image"

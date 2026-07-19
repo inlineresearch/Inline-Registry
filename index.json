@@ -3,21 +3,13 @@
     {
       "id": "demo",
       "name": "Inline Demo Extension",
-      "description": "A reference extension: two modules, custom nodes, and a model requirement.",
-      "repo": "https://github.com/inline-studio/inline-extension-demo",
-      "homepage": "https://github.com/inline-studio/inline-extension-demo",
-      "author": "Inline Studio",
+      "description": "A reference extension: a runnable generate node plus three image nodes.",
+      "repo": "https://github.com/inlineresearch/Inline-Extension-Reference",
+      "homepage": "https://github.com/inlineresearch/Inline-Extension-Reference",
+      "author": "Inline Research",
       "tags": [
         "reference",
         "image"
-      ],
-      "latest": "v1.0.0",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "tag": "v1.0.0",
-          "coreCompat": ">=1.2,<2.0"
-        }
       ]
     }
   ]

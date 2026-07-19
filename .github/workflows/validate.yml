@@ -1,4 +1,10 @@
 name: validate
+
+env:
+  # Extension support (`inline_core.extensions`) is newer than the last PyPI release, so CI installs
+  # Core from source. Switch to `pip install inline-core` once a release ships with it.
+  CORE_SOURCE: "inline-core @ git+https://github.com/inlineresearch/Inline-Core@main"
+
 on:
   pull_request:
   push:
@@ -12,7 +18,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install inline-core
+      - run: pip install "${{ env.CORE_SOURCE }}"
+      - name: Check Core supports extensions
+        run: |
+          python - <<'PY'
+          import importlib.util, sys
+          from importlib.metadata import version
+          if importlib.util.find_spec("inline_core.extensions") is None:
+              sys.exit(
+                  f"The installed inline-core ({version('inline-core')}) has no extension support.\n"
+                  "Point CORE_SOURCE at a Core build that ships inline_core.extensions."
+              )
+          PY
       - name: Validate entries
         run: python scripts/validate.py
 
@@ -28,7 +45,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install inline-core
+      - run: pip install "${{ env.CORE_SOURCE }}"
       - run: python scripts/validate.py --build
       - name: Commit index
         run: |

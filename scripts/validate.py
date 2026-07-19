@@ -21,7 +21,7 @@ from typing import Any
 REGISTRY = Path(__file__).parent.parent / "registry"
 INDEX = Path(__file__).parent.parent / "index.json"
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
-REQUIRED = ("id", "name", "description", "repo", "latest")
+REQUIRED = ("id", "name", "description", "repo")
 
 
 def fail(problems: list[str]) -> None:
@@ -57,15 +57,24 @@ def check_entry(path: Path) -> tuple[dict[str, Any], list[str]]:
 
 
 def check_repo(entry: dict[str, Any]) -> list[str]:
-    """Clone at the pinned tag and run the app's own manifest + security checks."""
+    """Clone at the newest release tag and run the app's own manifest + security checks.
+
+    A listing floats: it names the repository, and the version comes from its tags. So this
+    validates whatever the author has published most recently, not a version pinned here.
+    """
     try:
+        from inline_core.extensions.fetch import latest_tag
         from inline_core.extensions.manifest import ManifestError, load_manifest
         from inline_core.extensions.scanner import Severity, scan
     except ImportError:
-        print("::warning::inline-core is not installed; skipping the deep check")
+        print("::warning::inline-core has no extension support; skipping the deep check")
         return []
 
-    entry_id, repo, tag = str(entry["id"]), str(entry["repo"]), str(entry["latest"])
+    entry_id, repo = str(entry["id"]), str(entry["repo"])
+    tag = str(entry.get("pin") or latest_tag(repo) or "")
+    if not tag:
+        return [f"{entry_id}: {repo} has no release tag; the author must tag a release first"]
+    print(f"{entry_id}: validating {tag}")
     with tempfile.TemporaryDirectory() as tmp:
         checkout = Path(tmp) / entry_id
         clone = subprocess.run(

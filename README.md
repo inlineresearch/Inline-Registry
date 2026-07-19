@@ -14,11 +14,13 @@ The list of published extensions that Inline Studio shows under **Extensions →
   "description": "One line on what it does.",
   "repo": "https://github.com/you/your-extension",
   "author": "You",
-  "tags": ["image"],
-  "latest": "v1.0.0",
-  "versions": [{ "version": "1.0.0", "tag": "v1.0.0", "coreCompat": ">=1.2,<2.0" }]
+  "tags": ["image"]
 }
 ```
+
+**No version goes here.** A listing names your repository; Inline Studio resolves the newest
+release tag at install and when checking for updates. Publish a new version by tagging it - you
+never open another PR here.
 
 3. Open a PR. `id` must match both the filename and your manifest's `id`.
 

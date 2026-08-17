@@ -1,4 +1,4 @@
-# Inline Studio Extension Registry
+# Inline Studio Registry
 
 The list of published extensions & models
 

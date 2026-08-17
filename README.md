@@ -1,6 +1,6 @@
 # Inline Studio Extension Registry
 
-The list of published extensions that Inline Studio shows under **Extensions → Available**.
+The list of published extensions & models
 
 ## Publishing an extension
 
@@ -40,3 +40,49 @@ Your repo is cloned at the tag and put through **the same checks the app runs at
 
 Listing here is not an endorsement or a safety guarantee. Extensions run in the same process as
 Inline Studio and can do anything it can. Review the code you install.
+
+# Model registry
+
+The list of models Inline Studio shows under **Settings → Models**.
+
+Two files, both complete lists:
+
+- `models.json`: verified only
+- `models.dev.json`: secondary + non verified
+
+## Adding a model
+
+Add an entry in models.dev.json:
+
+```json
+{
+  "id": "flux-2-klein-4b",
+  "label": "FLUX.2 Klein 4B",
+  "filename": "flux-2-klein-4b.safetensors",
+  "category": "diffusion_models",
+  "group": "flux-2-klein-4b",
+  "precision": "",
+  "source": {
+    "kind": "hf_file",
+    "repo": "Comfy-Org/flux2-klein-4B",
+    "path": "split_files/diffusion_models/flux-2-klein-4b.safetensors"
+  },
+  "verified": true,
+  "size_bytes": null,
+  "updated": "2026-08-17"
+}
+```
+
+Run `python scripts/validate_models.py` before opening a PR.
+
+## What the app does with this
+
+It resolves filenames. When a graph, a node or a training run names a file that is
+not on disk, the app looks the name up here and offers the download.
+
+**It never uses this to decide what a checkpoint is.** A model is identified from its own tensor
+shapes, because `diffusion_models/` is shared across architectures and two encoders can have
+identical shapes. A file listed under the wrong `category`, or a `filename` that does not match
+what the repo actually serves, will download and then fail at generation. Get those right.
+
+In case you want a model listed here, open a PR. 

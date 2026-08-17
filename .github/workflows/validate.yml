@@ -33,6 +33,15 @@ jobs:
       - name: Validate entries
         run: python scripts/validate.py
 
+  models:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/validate_models.py
+
   publish:
     # index.json is generated, never hand-edited, so the app always fetches a validated list.
     if: github.ref == 'refs/heads/main'

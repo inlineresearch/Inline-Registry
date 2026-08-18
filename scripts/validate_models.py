@@ -42,8 +42,11 @@ def check_entry(entry: Any, where: str) -> list[str]:
         elif kind == "url":
             if not str(source.get("url", "")).startswith("https://"):
                 problems.append(f"{where}: {ident} source.url must be https")
-        elif not source.get("repo") or not source.get("path"):
-            problems.append(f"{where}: {ident} needs source.repo and source.path")
+        elif not source.get("repo"):
+            problems.append(f"{where}: {ident} needs source.repo")
+        elif not source.get("path") and not source.get("files"):
+            # A folder at the repo root names its files, so it cannot pull a sibling it must not.
+            problems.append(f"{where}: {ident} needs source.path or source.files")
     elif source is not None:
         problems.append(f"{where}: {ident} source must be an object")
 

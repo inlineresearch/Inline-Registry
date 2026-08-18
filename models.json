@@ -18,6 +18,28 @@
       "group": "body-pose-model"
     },
     {
+      "id": "dinov2-base",
+      "label": "DINOv2 base subject embedder",
+      "filename": "dinov2-base",
+      "category": "annotators",
+      "group": "dinov2-base",
+      "precision": "",
+      "source": {
+        "kind": "hf_folder",
+        "repo": "facebook/dinov2-base",
+        "path": "",
+        "files": [
+          "config.json",
+          "preprocessor_config.json",
+          "model.safetensors"
+        ]
+      },
+      "verified": true,
+      "optional": false,
+      "updated": "2026-08-17",
+      "size_bytes": 346346896
+    },
+    {
       "id": "dpt-hybrid-midas-501f0c75",
       "label": "MiDaS depth",
       "filename": "dpt_hybrid-midas-501f0c75.pt",
@@ -33,6 +55,40 @@
       "updated": "2026-08-17",
       "precision": "",
       "group": "dpt-hybrid-midas-501f0c75"
+    },
+    {
+      "id": "face-detection-yunet",
+      "label": "YuNet face detector",
+      "filename": "face_detection_yunet_2023mar.onnx",
+      "category": "annotators",
+      "group": "face-detection-yunet",
+      "precision": "",
+      "source": {
+        "kind": "hf_file",
+        "repo": "opencv/face_detection_yunet",
+        "path": "face_detection_yunet_2023mar.onnx"
+      },
+      "verified": true,
+      "optional": false,
+      "updated": "2026-08-17",
+      "size_bytes": 232589
+    },
+    {
+      "id": "face-recognition-sface",
+      "label": "SFace face embedder",
+      "filename": "face_recognition_sface_2021dec.onnx",
+      "category": "annotators",
+      "group": "face-recognition-sface",
+      "precision": "",
+      "source": {
+        "kind": "hf_file",
+        "repo": "opencv/face_recognition_sface",
+        "path": "face_recognition_sface_2021dec.onnx"
+      },
+      "verified": true,
+      "optional": false,
+      "updated": "2026-08-17",
+      "size_bytes": 38696353
     },
     {
       "id": "facenet",

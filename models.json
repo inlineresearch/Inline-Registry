@@ -12,7 +12,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 209267595,
       "updated": "2026-08-17",
       "precision": "",
       "group": "body-pose-model"
@@ -29,7 +29,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 492757791,
       "updated": "2026-08-17",
       "precision": "",
       "group": "dpt-hybrid-midas-501f0c75"
@@ -46,7 +46,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 153718792,
       "updated": "2026-08-17",
       "precision": "",
       "group": "facenet"
@@ -63,7 +63,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 147341049,
       "updated": "2026-08-17",
       "precision": "",
       "group": "hand-pose-model"
@@ -80,7 +80,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 6712485600,
       "updated": "2026-08-17",
       "precision": "",
       "group": "z-image-turbo-fun-controlnet-union-2-1-2602-8steps"
@@ -97,7 +97,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 861995928,
       "updated": "2026-08-17",
       "precision": "",
       "group": "depth-control-lora"
@@ -114,7 +114,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 7751105712,
       "updated": "2026-08-17",
       "precision": "",
       "group": "flux-2-klein-4b"
@@ -131,7 +131,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 18157185168,
       "updated": "2026-08-17",
       "precision": "",
       "group": "flux-2-klein-9b"
@@ -148,7 +148,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 7751105712,
       "updated": "2026-08-17",
       "precision": "",
       "group": "flux-2-klein-base-4b"
@@ -165,7 +165,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 35455599592,
       "updated": "2026-08-17",
       "precision": "fp8mixed",
       "group": "flux2-dev"
@@ -182,7 +182,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 26283332608,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "krea2-raw"
@@ -199,7 +199,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 26283332608,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "krea2-turbo"
@@ -216,7 +216,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 42018190584,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-22b-dev-transformer"
@@ -233,7 +233,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 42018190584,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-22b-distilled-transformer"
@@ -250,7 +250,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 18721548408,
       "updated": "2026-08-17",
       "precision": "nvfp4",
       "group": "ltx-2-5-22b-distilled-transformer"
@@ -267,7 +267,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 66280487368,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "minimax-h3-fl2va"
@@ -284,7 +284,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 20958205608,
       "updated": "2026-08-17",
       "precision": "pruned_fp8_scaled",
       "group": "minimax-h3-fl2va"
@@ -301,7 +301,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 66280487368,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "minimax-h3-ref2va"
@@ -318,7 +318,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 12309866400,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "z-image"
@@ -335,7 +335,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 995778752,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-latent-spatial-upscaler-x2-1-0"
@@ -352,7 +352,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 261944000,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-latent-temporal-upscaler-x2-1-0"
@@ -369,7 +369,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 8899889568,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-22b-distilled-lora-450"
@@ -386,7 +386,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 3843690,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-duration-head"
@@ -403,7 +403,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 11498352,
       "updated": "2026-08-17",
       "precision": "",
       "group": "minimax-h3-processor"
@@ -420,7 +420,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 66726510529,
       "updated": "2026-08-17",
       "precision": "",
       "group": "minimax-h3-text-encoder"
@@ -437,7 +437,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 26263858182,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "gemma4-12b-with-proj-ltx-2-5"
@@ -454,7 +454,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 18034640095,
       "updated": "2026-08-17",
       "precision": "fp8",
       "group": "mistral-3-small-flux2"
@@ -471,7 +471,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 8875719384,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "qwen3vl-4b"
@@ -488,7 +488,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 8044982048,
       "updated": "2026-08-17",
       "precision": "",
       "group": "qwen-3-4b"
@@ -505,7 +505,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 8044982048,
       "updated": "2026-08-17",
       "precision": "",
       "group": "qwen-3-4b"
@@ -522,7 +522,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 16381517176,
       "updated": "2026-08-17",
       "precision": "",
       "group": "qwen-3-8b"
@@ -539,7 +539,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 335304388,
       "updated": "2026-08-17",
       "precision": "",
       "group": "ae"
@@ -556,7 +556,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 336211292,
       "updated": "2026-08-17",
       "precision": "",
       "group": "flux2-vae"
@@ -573,7 +573,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 364866540,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-audio-vae"
@@ -590,7 +590,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 1472223346,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-video-vae"
@@ -607,7 +607,7 @@
       },
       "verified": true,
       "optional": true,
-      "size_bytes": null,
+      "size_bytes": 1452269922,
       "updated": "2026-08-17",
       "precision": "bf16",
       "group": "ltx-2-5-video-vae-conv"
@@ -624,7 +624,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 605254808,
       "updated": "2026-08-17",
       "precision": "fp32",
       "group": "minimax-h3-audio-vae"
@@ -641,7 +641,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 5207808496,
       "updated": "2026-08-17",
       "precision": "fp16",
       "group": "minimax-h3-video-vae"
@@ -658,7 +658,7 @@
       },
       "verified": true,
       "optional": false,
-      "size_bytes": null,
+      "size_bytes": 253806966,
       "updated": "2026-08-17",
       "precision": "",
       "group": "qwen-image-vae-diffusers"

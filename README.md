@@ -45,14 +45,13 @@ Inline Studio and can do anything it can. Review the code you install.
 
 The list of models Inline Studio shows under **Settings → Models**.
 
-Two files, both complete lists:
-
-- `models.json`: verified only
-- `models.dev.json`: secondary + non verified
+One file, `models.json`, and everything in it is verified. An unverified model needs a channel of
+its own so the default list stays trustworthy; add `models.dev.json` back when there is one to put
+in it, and point `INLINE_MODEL_REGISTRY` at it to see them.
 
 ## Adding a model
 
-Add an entry in models.dev.json:
+Add an entry in models.json:
 
 ```json
 {

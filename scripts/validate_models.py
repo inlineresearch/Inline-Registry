@@ -9,7 +9,6 @@ from typing import Any
 
 ROOT = Path(__file__).parent.parent
 PUBLISHED = ROOT / "models.json"
-DEV = ROOT / "models.dev.json"
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,63}$")
 REQUIRED = ("id", "filename", "category", "source", "group")
 KINDS = ("hf_file", "hf_folder", "url")
@@ -56,7 +55,7 @@ def check_entry(entry: Any, where: str) -> list[str]:
     return problems
 
 
-def check_file(path: Path, *, allow_unverified: bool) -> tuple[list[dict[str, Any]], list[str]]:
+def check_file(path: Path) -> tuple[list[dict[str, Any]], list[str]]:
     if not path.is_file():
         return [], [f"{path.name}: missing"]
     try:
@@ -78,8 +77,10 @@ def check_file(path: Path, *, allow_unverified: bool) -> tuple[list[dict[str, An
         if ident in ids:
             problems.append(f"{path.name}: duplicate id {ident!r}")
         ids.add(ident)
-        if not allow_unverified and not entry.get("verified"):
-            problems.append(f"{path.name}: {ident} is not verified; put it in models.dev.json")
+        # One list, so everything in it is offered by default: an unverified entry belongs in a
+        # separate channel, which is what models.dev.json was and will be again when one exists.
+        if not entry.get("verified"):
+            problems.append(f"{path.name}: {ident} is not verified")
         # A filename may appear twice (two repos carry it), but never from the same source.
         key = (str(entry.get("filename", "")), json.dumps(entry.get("source") or {}, sort_keys=True))
         if key in sources:
@@ -89,21 +90,12 @@ def check_file(path: Path, *, allow_unverified: bool) -> tuple[list[dict[str, An
 
 
 def main() -> int:
-    published, problems = check_file(PUBLISHED, allow_unverified=False)
-    dev, dev_problems = check_file(DEV, allow_unverified=True)
-    problems += dev_problems
-
-    # The dev list is the fuller one, so anything published has to be in it.
-    dev_ids = {str(e.get("id")) for e in dev}
-    for entry in published:
-        if str(entry.get("id")) not in dev_ids:
-            problems.append(f"models.dev.json: missing {entry.get('id')!r} from models.json")
-
+    published, problems = check_file(PUBLISHED)
     if problems:
         for problem in problems:
             print(f"::error::{problem}")
         return 1
-    print(f"models.json {len(published)} entries, models.dev.json {len(dev)} entries: OK")
+    print(f"models.json {len(published)} entries: OK")
     return 0
 
 

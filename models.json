@@ -718,6 +718,40 @@
       "updated": "2026-08-17",
       "precision": "",
       "group": "qwen-image-vae-diffusers"
+    },
+    {
+      "id": "krea2-turbo-training-adapter-v1",
+      "label": "Turbo training adapter (de-distillation, for LoRA training)",
+      "filename": "krea2_turbo_training_adapter_v1.safetensors",
+      "category": "loras",
+      "source": {
+        "kind": "hf_file",
+        "repo": "ostris/krea2_turbo_training_adapter",
+        "path": "krea2_turbo_training_adapter_v1.safetensors"
+      },
+      "verified": true,
+      "optional": true,
+      "size_bytes": 228587504,
+      "updated": "2026-08-20",
+      "precision": "bf16",
+      "group": "krea2-turbo"
+    },
+    {
+      "id": "zimage-turbo-training-adapter-v2",
+      "label": "Turbo training adapter (de-distillation, for LoRA training)",
+      "filename": "zimage_turbo_training_adapter_v2.safetensors",
+      "category": "loras",
+      "source": {
+        "kind": "hf_file",
+        "repo": "ostris/zimage_turbo_training_adapter",
+        "path": "zimage_turbo_training_adapter_v2.safetensors"
+      },
+      "verified": true,
+      "optional": true,
+      "size_bytes": 340194488,
+      "updated": "2026-08-20",
+      "precision": "bf16",
+      "group": "z-image-turbo"
     }
   ]
 }
